@@ -18,7 +18,7 @@ Make sure you have the following software installed on your machine:
 1. **Clone the repository**:
 
     ```sh
-    git clone https://github.com/vinaytheprogrammmer/Weather_Report.git
+    git clone https://github.com/vinaytheprogrammer/Weather_Report.git
     ```
 
 2. **Navigate to the project directory**:
@@ -43,7 +43,7 @@ npm run dev
 
 
 
-This will start the application, and you can view it in your browser at `http://localhost:3000`.
+This will start the application, and you can view it in your browser at `http://localhost:3001`.
 
 ## Creating API Keys
 
@@ -62,7 +62,6 @@ After obtaining your API keys, create a `.env` file in the root of your project 
 API_KEY=your_openweathermap_api_key
 ```
 
-Replace `your_mapbox_access_token` and `your_openweathermap_api_key` with your actual API keys.
 
 ## Using Git Branching
 
@@ -117,7 +116,7 @@ git pull origin main
 
 ## Author
 
-- **Your Name** - [Your GitHub Profile](https://github.com/vinaytheprogrammmer)
+- **Your Name** - [Your GitHub Profile](https://github.com/vinaytheprogrammer)
 
 ## License
 
