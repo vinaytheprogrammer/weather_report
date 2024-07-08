@@ -40,7 +40,7 @@ Make sure you have the following software installed on your machine:
 To start the development server, run:
 
 ```sh
-npm run dev
+node server.js
 ```
 
 This will start the application, and you can view it in your browser at `http://localhost:3000`.
