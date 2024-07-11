@@ -1,5 +1,3 @@
-
-```markdown
 # Weather_Report Project
 
 This project is a React application for displaying weather reports.
@@ -20,7 +18,7 @@ Make sure you have the following software installed on your machine:
 1. **Clone the repository**:
 
     ```sh
-    git clone https://github.com/your-username/Weather_Report.git
+    git clone https://github.com/vinaytheprogrammer/Weather_Report.git
     ```
 
 2. **Navigate to the project directory**:
@@ -39,11 +37,7 @@ Make sure you have the following software installed on your machine:
 
 To start the development server, run:
 
-```sh
-node server.js
-```
 
-This will start the application, and you can view it in your browser at `http://localhost:3000`.
 
 ## Using Git Branching
 
@@ -96,11 +90,6 @@ git checkout main
 git pull origin main
 ```
 
-## Built With
-
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-
 ## Author
 
 - **Your Name** - [Your GitHub Profile](https://github.com/vinaytheprogrammer)
@@ -110,4 +99,4 @@ git pull origin main
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
 
-This README provides detailed instructions for setting up the project, using Git branching, and managing pull requests, with all the specific git commands included. Be sure to replace `https://github.com/vinaytheprogrammer/weather_report.git` with the actual URL of your repository and update the author section with your details.
+This README file now includes detailed instructions for obtaining API keys, along with clear and organized sections for setting up the project, using Git branching, and managing pull requests. Be sure to replace `https://github.com/vinaytheprogrammmer/Weather_Report.git` with the actual URL of your repository and update the author section with your details.
