@@ -9,9 +9,9 @@ function getWeather() {
                 document.getElementById('weather-info').innerHTML = `<p>${data.message}</p>`;
             } else {
                 document.getElementById('weather-info').innerHTML = `
-                    <p>City: ${data.name}</p>
-                    <p>Temperature: ${Math.round(data.main.temp - 273.15)} °C</p>
-                    <p>Description: ${data.description = "Mast Mosam hai bhai aaja Chay pete h"}</p>
+                    <h2>City: ${data.name}</h2>
+                    <h4>Temperature: ${Math.round(data.main.temp - 273.15)} °C</h4>
+                    <h4>Description: ${data.description = "Mast Mosam hai bhai aaja Chay pete h"}</h4>
                 `;
             }
         })

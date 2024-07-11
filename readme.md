@@ -37,30 +37,6 @@ Make sure you have the following software installed on your machine:
 
 To start the development server, run:
 
-```sh
-npm run dev
-
-
-
-
-This will start the application, and you can view it in your browser at `http://localhost:3001`.
-
-## Creating API Keys
-
-You will need API keys for OpenWeatherMap to fetch the required data.
-
-
-### OpenWeatherMap
-
-1. Visit [OpenWeatherMap](https://openweathermap.org/).
-2. Sign up or log in.
-3. Go to your [API keys page](https://home.openweathermap.org/api_keys) and create a new API key.
-
-After obtaining your API keys, create a `.env` file in the root of your project and add the following:
-
-```sh
-API_KEY=your_openweathermap_api_key
-```
 
 
 ## Using Git Branching
