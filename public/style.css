@@ -1,77 +1,100 @@
 body {
-    font-family: Arial, sans-serif;
-    background-image: url(https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/altocumulus.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); 
+    animation: gradientBackground 15s ease infinite;
+    
 }
 
 .container {
-    max-width: 800px;
-    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    max-width: 400px;
     padding: 20px;
-    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 50px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(225, 225, 255, 0.1);
     text-align: center;
-    margin-bottom: 20px;
 }
 
-input[type="text"] {
-    width: 70%;
-    padding: 12px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+h2, label, p {
+    color: black;
+    margin: 8px 0;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 20px;
     font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:hover {
-    border-color: #888;
-}
-
-input[type="text"]:focus {
-    border-color: rgb(31, 31, 75);
-    box-shadow: 0 0 8px #2c94f5;
 }
 
 button {
-    padding: 12px 24px;
-    background-color: #007bff;
-    color: #fff;
+    background: #0a9396;
+    color: white;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
-    text-transform: uppercase;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
 }
 
 button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+    background: #065657;
 }
 
-button:active {
-    transform: translateY(0);
-    box-shadow: none;
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
 }
 
 #weather-info {
-    margin-top: 20px;
-    border: solid 1px grey;
-    padding: 10px;
-    box-shadow: 10px;
-    border-radius: 5px;
+    font-size: 20px;
+}
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #fff;
+    margin-top: 10px;
 }
