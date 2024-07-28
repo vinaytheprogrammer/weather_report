@@ -2,15 +2,15 @@ const express = require('express');
 const { geocode } = require('./utils/geocode');
 const { openWeather } = require('./utils/openweather');
 const punycode = require('punycode/');
-
-
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 app.use(express.static('public'));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/weather', (req, res) => {
     const { location } = req.query;
@@ -39,7 +39,6 @@ app.get('/weather', (req, res) => {
                     message: err.message
                 });
             }
-            // console.log(result)
             return res.json(result);
         });
     });
