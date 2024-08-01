@@ -79,6 +79,7 @@ function displayHourlyForecast(hourlyData) {
                 <span>${hour}:00</span>
                 <img src="${iconUrl}" alt="Hourly Weather Icon">
                 <span>${temperature}°C</span>
+               
             </div>
         `;
         hourlyForecastDiv.innerHTML += hourlyItemHtml;
