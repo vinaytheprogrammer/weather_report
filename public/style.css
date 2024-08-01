@@ -9,6 +9,7 @@ body {
     background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); 
     animation: gradientBackground 15s ease infinite;
     
+    
 }
 
 .container {
@@ -20,11 +21,43 @@ body {
     backdrop-filter: blur(10px);
     border: 1px solid rgba(225, 225, 255, 0.1);
     text-align: center;
+    border:5px solid rgb(84, 83, 83);
 }
+
 
 h2, label, p {
     color: black;
     margin: 8px 0;
+}
+h1{
+   transition-property: all;
+   transition-duration: .2s;
+   transition-timing-function: ease-in-out;
+}
+h1:hover{
+  
+   border-radius: 20px;  
+   color:brown;
+   border: 1px solid black;
+
+   font-size: 35px;
+}
+
+#search-button{
+    background-color: cyan;
+    border: 2px solid black;
+  color:black;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+#search-button:hover{
+    background: blueviolet;
+    color: white;
 }
 
 input {
@@ -63,8 +96,8 @@ button:hover {
 }
 
 #weather-icon {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto 10px;
     margin-bottom: 0;
     display: none;
@@ -85,7 +118,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     margin-right: 10px;
-    color: white;
+    color: black;
 }
 
 .hourly-item img {
