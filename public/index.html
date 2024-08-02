@@ -3,24 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Cute Weather Wonderland</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </head>
 <body>
+    <div class="background-image"></div> <!-- Background image div -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
     <div class="container">
-        <h1>Weather App</h1>
+        <h1 class="app-title">Weather Wonderland</h1>
+        
         <div class="search-container">
-            <input type="text" id="location" placeholder="Enter location">
-            <button onclick="getWeather()">Search</button>
+            <input type="text" id="location" placeholder="Enter your magical place">
+            <button onclick="getWeather()" class="search-btn">✨ Discover</button>
         </div>
-        <div id="weather-display">
+
+        <div id="weather-display" class="weather-card">
             <div id="temp-div"></div>
-            <img id="weather-icon" alt="Weather Icon">
+            <img id="weather-icon" alt="Weather Icon" class="main-weather-icon">
             <div id="weather-info"></div>
         </div>
-        <h3 id="hourly-heading">Hourly Forecast</h3>
-        <div id="hourly-forecast"></div>
+
+        <div id="hourly-forecast" class="forecast-card">
+            <h3>Hourly Forecast</h3>
+            <div class="hourly-items"></div>
+        </div>
+
+        <div id="extended-forecast" class="forecast-card">
+            <h3>5-Day Forecast</h3>
+            <div id="five-day-forecast"></div>
+        </div>
+
+        <div id="weather-comparison" class="comparison-card">
+            <h3>City Weather Comparison</h3>
+            <input type="text" id="compare-city" placeholder="Enter city to compare">
+            <button onclick="compareWeather()" class="compare-btn">🔮 Compare</button>
+            <div id="comparison-result"></div>
+        </div>
+
+        <div id="weather-game" class="game-card">
+            <h3>Weather Trivia Game</h3>
+            <button onclick="startWeatherGame()" class="game-btn">🎮 Start Game</button>
+            <div id="game-container"></div>
+        </div>
+
+        <div id="weather-impact" class="impact-card">
+            <h3>Weather Impact on Daily Life</h3>
+            <div id="impact-info"></div>
+        </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

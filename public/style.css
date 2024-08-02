@@ -1,105 +1,150 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+body, html {
     margin: 0;
     padding: 0;
-    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); 
-    animation: gradientBackground 15s ease infinite;
-}
-
-@keyframes gradientBackground {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    background: url('https://images.unsplash.com/photo-1615707658336-99b59121ebfb?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.3);
-    max-width: 400px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(225, 225, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+.app-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
     text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-h1, h2, label, p {
-    color: black;
-    margin: 8px 0;
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
 }
 
-input {
-    width: calc(100% - 16px);
-    padding: 8px;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid black;
-    margin-top: 20px;
-    font-size: 16px;
+input[type="text"] {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    margin-right: 0.5rem;
+    width: 60%;
+}
+
+input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 button {
-    background: #0a9396;
-    color: white;
-    padding: 10px;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
+    background: #4CAF50;
+    color: #ffffff;
     cursor: pointer;
-    margin-top: 20px;
-    width: 100px;
-    font-size: 15px;
+    transition: all 0.3s ease;
 }
 
 button:hover {
-    background: #065657;
+    background: #45a049;
+    transform: translateY(-2px);
 }
 
-#temp-div p {
-    font-size: 60px;
-    margin-top: -30px;
+.weather-card, .forecast-card, .comparison-card, .game-card, .impact-card {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(105, 240, 174, 0.3));
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+}
+
+.weather-card:hover, .forecast-card:hover, .comparison-card:hover, .game-card:hover, .impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#temp-div {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-weather-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: block;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
 }
 
 #weather-info {
-    font-size: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-#weather-icon {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto 10px;
-    margin-bottom: 0;
-    display: none;
-}
-
-#hourly-forecast {
-    margin-top: 50px;
-    overflow-x: auto;
-    white-space: nowrap;
+.hourly-items, #five-day-forecast {
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
+    padding: 1rem 0;
 }
 
-.hourly-item {
-    flex: 0 0 auto;
-    width: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 10px;
-    color: white;
+.hourly-item, .day-forecast {
+    text-align: center;
+    margin: 0 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: #ffffff;
 }
 
-.hourly-item img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
+.hourly-item img, .day-forecast img {
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
 }
 
-#hourly-heading {
-    color: #fff;
-    margin-top: 10px;
+#comparison-result, #game-container, #impact-info {
+    margin-top: 1rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .app-title {
+        font-size: 2rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    input[type="text"], button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
