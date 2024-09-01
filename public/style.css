@@ -8,18 +8,20 @@ body {
     padding: 0;
     background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4); 
     animation: gradientBackground 15s ease infinite;
-    
 }
 
 .container {
     background-color: rgba(255, 255, 255, 0.3);
-    max-width: 400px;
+    max-width: 90%;
+    width: 100%;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(225, 225, 255, 0.1);
     text-align: center;
+    box-sizing: border-box;
+    margin: 10px;
 }
 
 h2, label, p {
@@ -54,17 +56,18 @@ button:hover {
 }
 
 #temp-div p {
-    font-size: 60px;
+    font-size: 48px;
     margin-top: -30px;
 }
 
 #weather-info {
     font-size: 20px;
+    word-wrap: break-word; /* Ensures text doesn't overflow the container */
 }
 
 #weather-icon {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto 10px;
     margin-bottom: 0;
     display: none;
@@ -97,4 +100,40 @@ button:hover {
 #hourly-heading {
     color: #fff;
     margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    #temp-div p {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    input, button {
+        font-size: 14px;
+    }
+    
+    #temp-div p {
+        font-size: 36px;
+    }
+    
+    #weather-icon {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hourly-item {
+        width: 60px;
+    }
 }
